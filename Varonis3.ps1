@@ -1,5 +1,6 @@
 ﻿#If azcopy is in the Path, replace .\AzCopy.exe with azcopy in line 75.
 #If not, run scpript from AzCopy executable folder. 
+#Run script with Admin priviliges 
 
 param(
  [Parameter(Mandatory=$True)]
@@ -29,7 +30,7 @@ $SecGroupName = "Varonis Assignment2 Group"
 $SecGroupNick = "VaronisAssignment2Group"
 $Users = New-Object System.Collections.ArrayList
 
-for ($i=1; $i -le 2; $i++){
+for ($i=1; $i -le 20; $i++){
     $User = "Test User" + $i
     $UserEmail = "Testuser" + $i + "@" + "$domain"
     $UserNick = "Testuser" + $i
